@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.Menu"
+             Title="Opcion">
+    <Grid>
+
+        <Image Source="fondodos.jpg" Aspect="AspectFill" />
+        <ScrollView VerticalOptions="CenterAndExpand">
+        <VerticalStackLayout>
+            
+            <!-- Agrega un CardView -->
+                <Frame BackgroundColor="White" CornerRadius="10" Margin="20" Opacity="0.8"  Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    
+                    <!-- Agrega los frames en lugar de botones -->
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="0">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="house.png" HeightRequest="50" />
+                                <Button Text="Home" Clicked="Button_Clicked_1" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="1">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="user_solid.png" HeightRequest="50" />
+                                <Button Text="Users" Clicked="Button_Clicked_3" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="0">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="user_plus_solid.png" HeightRequest="50" />
+                                <Button Text="Register" Clicked="Button_Clicked" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="1">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="magnifying_glass_solid.png" HeightRequest="50" />
+                                <Button Text="Empleos" Clicked="Button_Clicked_4" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="2" Grid.Column="0">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="upload_solid.png" HeightRequest="50"  />
+                                <Button Text="Publish" Clicked="Button_Clicked_2" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Grid.Row="2" Grid.Column="1">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="info.png" HeightRequest="50" />
+                                <Button Text="More Info" TextColor="Black" HorizontalOptions="Center" BackgroundColor="MediumPurple" />
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>

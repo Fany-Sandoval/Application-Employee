@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.Login"
+             Title="Login">
+    <Grid>
+        <Image Source="fondodos.jpg" Aspect="AspectFill" />
+        
+
+
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="White" Opacity="0.8"  Padding="20">
+                <Label HorizontalOptions="Center">Bienvenido Profesionista</Label>
+                <Image Source="dotnet_bot.png" HeightRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+                <Entry Placeholder="email" x:Name="emailEntry" Margin="0,10"  />
+                <Entry Placeholder="password" IsPassword="true" x:Name="passwordEntry" Margin="0,10"/>
+
+                <Button Text="Login"  HorizontalOptions="FillAndExpand"  TextColor="White" Margin="0,20" BackgroundColor="#2196F3" CornerRadius="10" Clicked="Button_Clicked_1" />
+                <Button Text="Registrate" Clicked="Button_Clicked" HorizontalOptions="FillAndExpand"  TextColor="White" Margin="0,20" BackgroundColor="#2196F3" CornerRadius="10" Command="{Binding Commands.ClickCommand}" />
+
+                <Label x:Name="StatusLabel" Text="" HorizontalOptions="Center" TextColor="Red" Margin="0,10" />
+                
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

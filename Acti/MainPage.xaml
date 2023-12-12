@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.MainPage">
+
+    <!-- Agrega una Grid para contener la imagen de fondo y el contenido -->
+    <Grid>
+        <Image Source="fondodos.jpg"
+               Aspect="AspectFill" />
+        <!-- Ajusta la imagen de fondo -->
+
+        <!-- Añade un ScrollView para el contenido encima de la imagen de fondo -->
+        <ScrollView>
+            <StackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="CenterAndExpand">
+
+                <StackLayout Padding="20">
+                    <StackLayout BackgroundColor="White" Opacity="0.8"  Padding="20">
+                        <Image Source="dotnet_bot.png" HeightRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                        <Label HorizontalOptions="Center" Text="Estamos para ayudarte" />
+                        <Button
+                            Text="Iniciar Sesión"
+                            Clicked="Button_Clicked_1"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="MediumPurple"
+                            TextColor="White"
+                            Margin="0,20" />
+                        <!-- Ajusta el ancho aquí -->
+
+                        <Button
+                            Text="Acciones"
+                            Clicked="Button_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="MediumPurple"
+                            TextColor="White"
+                            Margin="0,10" />
+                        <!-- Ajusta el ancho aquí -->
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.ListaEmpleos"
+             Title="ListaEmpleos">
+   
+    <Grid>
+        <Image Source="fondodos.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <StackLayout Spacing="25" Padding="30,0" VerticalOptions="CenterAndExpand">
+                <StackLayout BackgroundColor="White" Opacity="0.8" Padding="20">
+                    <Label Text="Empleos" FontSize="Title" HorizontalOptions="Center" Margin="0,20,0,20" />
+
+                    <CollectionView ItemsSource="{Binding Lista}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White" CornerRadius="10" Margin="10">
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Puesto:" TextColor="Black" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding puesto}" TextColor="Black" />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Text="Empresa:" TextColor="Black" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding empresa}" TextColor="Black" />
+
+                                        <Label Grid.Row="2" Grid.Column="0" Text="Salario:" TextColor="Black" />
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding salario}" TextColor="Black" />
+                                        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Postular" TextColor="Black" BackgroundColor="Green" Clicked="Button_Clicked_4"/>
+
+                                        <!-- Agregamos el botón Detalles -->
+                                        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="Detalles" TextColor="Black" BackgroundColor="Yellow" Clicked="Button_Clicked_2"/>
+                                        
+
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Button Text="Regresar" Clicked="Button_Clicked" BackgroundColor="MediumPurple"></Button>
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

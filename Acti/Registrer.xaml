@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.Registrer"
+             Title="Registrer">
+    <Grid>
+        <Image Source="fondodos.jpg"
+                Aspect="AspectFill" />
+        <ScrollView>
+            <StackLayout Spacing="25"
+                    Padding="30,0"
+                    VerticalOptions="CenterAndExpand">
+                <StackLayout  BackgroundColor="White" Opacity="0.8"  Padding="20">
+                    <Label Text="Registro de Usuario" FontSize="Title" HorizontalOptions="Center" Margin="0,20,0,20" />
+
+                    <Entry x:Name="IdEntry" Placeholder="Id" Margin="10" TextColor="Black"/>
+                    <Entry x:Name="NombreEntry" Placeholder="Nombre" Margin="10" TextColor="Black"/>
+                    
+                    <Entry x:Name="ApellidoPaternoEntry" Placeholder="Apellido Paterno" Margin="10" TextColor="Black"/>
+                    <Entry x:Name="ApellidoMaternoEntry" Placeholder="Apellido Materno" Margin="10" TextColor="Black"/>
+                    <Entry x:Name="TelefonoEntry" Placeholder="Telefono" Margin="10" Keyboard="Numeric"/>
+                    <Entry x:Name="emailEntry" Placeholder="email" Margin="10" Keyboard="Email"/>
+                    <Entry x:Name="passwordEntry" Placeholder="Password" Margin="10" IsPassword="True"/>
+
+                    <Button Text="Registrarse" Clicked="RegistrarseButton_Clicked" HorizontalOptions="FillAndExpand" Margin="10"/>
+
+                </StackLayout>
+
+            </StackLayout>
+            
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Acti.ListaUser"
+             Title="ListaUser">
+    <Grid>
+        <Image Source="fondodos.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <StackLayout Spacing="25" Padding="30,0" VerticalOptions="CenterAndExpand">
+                <StackLayout BackgroundColor="White" Opacity="0.8" Padding="20">
+                    <Label Text="Usuarios" FontSize="Title" HorizontalOptions="Center" Margin="0,20,0,20" />
+
+                    <CollectionView ItemsSource="{Binding ListaPersonas}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White" CornerRadius="10" Margin="10">
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Nombre:" TextColor="Black" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding nombre}" TextColor="Black" />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Text="Apellido Paterno:" TextColor="Black" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding apellidoPaterno}" TextColor="Black" />
+
+                                        <Label Grid.Row="2" Grid.Column="0" Text="Apellido Materno:" TextColor="Black" />
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding apellidoMaterno}" TextColor="Black" />
+
+                                        <Label Grid.Row="3" Grid.Column="0" Text="Teléfono:" TextColor="Black" />
+                                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding telefono}" TextColor="Black" />
+
+                                        <Label Grid.Row="4" Grid.Column="0" Text="Email:" TextColor="Black" />
+                                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding email}" TextColor="Black" />
+
+                                        <!-- Agregamos el botón Eliminar -->
+                                        <Button Grid.Row="5" Grid.ColumnSpan="2" Text="Eliminar" TextColor="Black" BackgroundColor="Red" Clicked="Button_Clicked" />
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Button Text="Regresar" Clicked="Button_Clicked_1"  BackgroundColor="MediumPurple"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
